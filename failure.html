@@ -12,10 +12,14 @@
 
 <body>
   <div class="jumbotron">
+
     <h1 class="display-4"> Oppssss!! ERROR 404!</h1>
     <p class="lead">There was Some erros to sign you up! Try again later. Thanks!</p>
     <hr class="my-4">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <form action="/failure" method="post">
+    <button class="btn btn-warning btn-lg" type="submit" name="submit" role="button">Try again</button>  
+    </form>
+
   </div>
 </body>
 

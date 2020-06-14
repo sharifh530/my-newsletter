@@ -47,10 +47,6 @@ app.post("/", function(req, res) {
     }else{
       res.sendFile(__dirname+"/failure.html");
     }
-
-    response.on("data", function(data){
-      console.log(JSON.parse(data));
-      });
     });
   request.write(jsonData);
   request.end();
@@ -58,13 +54,13 @@ app.post("/", function(req, res) {
 
 app.post("/success", function(req, res){
   res.redirect("/");
-})
+});
+
+app.post("/failure",function(req, res){
+  res.redirect("/");
+});
 
 
 app.listen(3000, function(req, res) {
   console.log("App is running on server 3000");
 });
-
-
-// 72b9c7ab751620a0ba654ff5e2892d9f-us10
-// 8c0ef19b4f
